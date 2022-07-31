@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import Command
 
-# Create your views here.
+
+class CommandListView(ListView):
+    model = Command
