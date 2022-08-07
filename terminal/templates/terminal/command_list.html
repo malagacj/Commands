@@ -13,7 +13,9 @@
     {% for elem in object_list %}
     <tr>
       <th scope="row">{{ forloop.counter }}</th>
-      <td>{{ elem.name }}</td>
+      <td>
+        <a href="{{ elem.get_absolute_url }}">{{ elem.name }}</a>
+      </td>
       <td>{{ elem.created_by }}</td>
     </tr>
     {% endfor%}

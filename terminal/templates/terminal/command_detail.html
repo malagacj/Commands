@@ -1,1 +1,10 @@
+{% extends 'base.html' %}
 {{ object }}
+
+{% block content %}
+<main>
+  <h1>{{ object.name }}</h1>
+  <p class="fs-5 col-md-8">{{ object.description }}</p>
+</main>
+{% endblock content %}
+
