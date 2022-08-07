@@ -4,6 +4,7 @@ User = get_user_model()
 
 class Command(models.Model):
     name = models.CharField(max_length=20)
+    description = models.TextField()
 
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now_add=True)
@@ -11,3 +12,6 @@ class Command(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('terminal:command_detail', args=[self.id])
