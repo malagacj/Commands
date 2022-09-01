@@ -20,7 +20,7 @@ function get_static_zip {
 
   rm -rf $filename
   
-  wget -O $filename.zip https://github.com/twbs/bootstrap/archive/v5.2.0.zip
+  wget -O $filename.zip $url
   unzip -d $filename $filename.zip; rm $filename.zip
   old_filename=`ls $filename`
   mv $filename/$old_filename/* $filename
